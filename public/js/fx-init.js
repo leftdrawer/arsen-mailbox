@@ -3,11 +3,9 @@
   if(!window.EunhoFX) return;
   var FX = window.EunhoFX;
   FX.auto({
-    metal: '.brand-lockup > span:last-child',                         // Liquid metal: 이름 글자에 빛이 스친다
     magnetic: '.btn-primary, .action-row > a.btn',                                         // Magnetic UI (마우스 화면만)
     light: '.hero-card, .room-card, .settings-card, .flow-card, .pwa-guide-card, .doc-section, .banner', // 커서 빛 (마우스 화면만)
     custom: [
-      ['.hero-actions .btn-primary, .flow-card .btn-primary.btn-block', function(el){ FX.beam(el, {variant:'sm', strength:.85}); }],  // Border beam: 첫 화면 주 단추
       ['.seg-group', function(el){ FX.gooTabs(el, {item:'.seg-btn', active:'[aria-pressed="true"]', inset:2}); }]  // Gooey: 분할 단추 선택 표시
     ]
   });
