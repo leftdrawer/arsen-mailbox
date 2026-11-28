@@ -3,6 +3,13 @@
 공식 서비스의 변경 내용을 최신순으로 기록합니다. 날짜는 한국 시간(KST) 기준입니다.
 
 
+## 2026-11-28 — 시트가 열릴 때 자리 잡기 (eunho-fx-plus)
+
+- 무엇: 참가자 넣기·상세·방 수정 같은 시트가 열릴 때 바탕은 스며들고 창은 0.94→1.02→1로 살짝 넘쳤다가 자리 잡는다(EasyUI SettleModal). 시트 내용·보안 수칙 로직은 그대로.
+- 출처: EasyUI(MIT © 2026 Suraj Maurya)·Morphin UI(MIT © 2026 Ivan Oliinyk)의 동작을 React 없이 새로 쓴 `eunho-fx-plus` 1.1. CSP(script-src 'self') 때문에 `public/js/eunho-fx-plus.js` 별도 파일, 라이선스 `public/js/eunho-fx-plus-LICENSE.txt`.
+- 관련 파일: `public/index.html`, `public/js/fx-init.js`, `public/js/eunho-fx-plus.js`, `public/js/eunho-fx-plus-LICENSE.txt`, `CHANGELOG.md`
+- 작업자: Grok Bot (백업: `C:\Users\phlog\ai-audit\backups\20261128-1856-round3\arsen-mailbox-eunho-fx\`)
+
 ## 2026-11-26 — eunho-fx 로고 금속광·주 단추 빛 제거
 
 - 무엇: 라이트 모드에서 '아르센' 글자를 씻겨 보이게 하던 로고 금속광과, 짙은 청록 단추 위에서 보이지 않던 '+ 내 공간 만들기' 둘레 빛을 뺐다. 테마 분할 단추 Gooey, 자석·커서 빛, 불러오는 중 구슬, 새 글 현상은 그대로 둔다.

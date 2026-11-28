@@ -15,6 +15,8 @@
       if(busy && !orb){ orb = FX.orbEl('searching', 20, {label:'이전 글 불러오는 중'}); orb.classList.add('fx-inline-orb'); btn.prepend(orb); }
       else if(!busy && orb){ FX.orb(orb, null); orb.remove(); orb = null; } };
     new MutationObserver(sync).observe(btn, {childList:true, characterData:true, subtree:true}); sync(); }]] });
+  // Settle (EasyUI SettleModal): 시트·창이 열릴 때 바탕은 스며들고 창은 0.94→1.02→1 로 살짝 넘쳤다가 자리 잡는다
+  if(FX.settleOn) FX.settleOn(document.getElementById('sheet-root'), {children:'.sheet-backdrop', panel:'.sheet-panel', backdrop:'.sheet-backdrop'});
   // Image generation: 새로 도착한 글만 현상되듯 드러난다 (방을 열 때 한꺼번에 그려지는 지난 글은 그대로)
   var seen = new Set(), batch = [], raf = 0;
   var keyOf = function(row){ return (row.textContent || '').slice(0, 240); };
