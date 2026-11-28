@@ -775,6 +775,8 @@ label {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-1) var(--sp-4);
+  /* gridlines: 링크의 8px 누름 여백만큼 당겨 마지막 글자가 카드·머리말 오른쪽 선에 닿게 함 */
+  margin-right: calc(-1 * var(--sp-2));
 }
 
 .key-box {
